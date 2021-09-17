@@ -1,7 +1,15 @@
 import random
-from rWords import rwords
+#from rWords import rwords
 import string
 
+user = input("welcome to hungman game\nEnter Your Name -> ")
+rwords=[]
+print ("Hello ! ",user,"\nI'll choose a word given by you\nthen you have to guess that word ")
+print("Enter 10 words that you like and I will make a list of It :")
+
+for i in range(11):
+    temp = input("enter word :")
+    rwords.append(temp)
 
 def choose_word(rwords):
     # randomly choose any word from the list from rWords file
@@ -48,6 +56,6 @@ def hangman():
     if lives == 0:
         print("Sorry! you have died, The word was ", word)
     else:
-        print(" You have gussed the word: " , word)
+        print("Congratulations!",user," You have gussed the word: " , word)
 
 hangman()
